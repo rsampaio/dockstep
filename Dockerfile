@@ -1,8 +1,8 @@
 FROM base 
 
 ADD stack /build
-ADD {{ app_cache }} /app
+ADD .cache /app
 RUN /build/prepare
 RUN /build/builder
-EXPOSE {{ app_port }}
+EXPOSE 80
 CMD /start
