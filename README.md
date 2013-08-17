@@ -1,6 +1,6 @@
 # Dockstep
 
-Heroku-style application builds using Docker and Buildpacks. Based on [Dokku](https://github.com/progrium/dokku) to make a mini-Heroku.
+Heroku-style application builds using Docker and Buildpacks. Based on [Buildstep](https://github.com/progrium/buildstep) to make a mini-Heroku.
 
 ## Requirements
 
