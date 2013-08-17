@@ -27,7 +27,7 @@ Create the base "app" container first.
 
     $ docker build -t app Dockerfile.base
 
-Cache your awesome app and create enjoy.
+Cache your awesome app and create the container.
 
     $ git clone http://github.com/user/awesome_app.git .cache
     $ docker build -t awesome_app .
