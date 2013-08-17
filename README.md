@@ -23,14 +23,16 @@ Buildpacks should generally just work, but many of them make assumptions about t
 
 ## Building an App
 
-    $ git clone http://github.com/user/awesome_app.git .cache
-    $ docker build -t app Dockerfile.base
-
 Create the base "app" container first.
 
+    $ docker build -t app Dockerfile.base
+
+Cache your awesome app and create enjoy.
+
+    $ git clone http://github.com/user/awesome_app.git .cache
     $ docker build -t awesome_app .
 
-Update your awesome app and rebuild
+Update your awesome app and rebuild afterwards
     
     $ cd .cache && git pull && cd -
     $ docker build -t awesome_app .
