@@ -25,16 +25,19 @@ Buildpacks should generally just work, but many of them make assumptions about t
 
 Create the base "app" container first.
 
-    $ docker build -t app Dockerfile.base
+    $ cd app_base
+    $ docker build -t app .
+    $ cd -
 
 Cache your awesome app and create the container.
 
+    $ cd app
     $ git clone http://github.com/user/awesome_app.git .cache
     $ docker build -t awesome_app .
 
 Update your awesome app and rebuild afterwards
     
-    $ cd .cache && git pull && cd -
+    $ cd app && cd .cache && git pull && cd -
     $ docker build -t awesome_app .
 
 The resulting container has a built app ready to go. The builder script also parses the Procfile and produces
